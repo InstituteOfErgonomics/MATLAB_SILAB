@@ -44,3 +44,5 @@ for i = [2 4 6 7 12 15 16 17 18 19 23 24 25 27 28 32 34 37 39 40]
 end
 
 csvwrite('Beschleunigungen.csv',Accelerations); %% Ausgabedatei schreiben
+
+disp('Auswerung beendet')
