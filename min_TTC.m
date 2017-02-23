@@ -13,7 +13,7 @@ for i = [2 4 6 7 12 15 16 17 18 19 23 24 25 27 28 32 34 37 39 40]
     Geschwindigkeit_kmh = VP('Geschwindigkeit');
     Geschwindigkeit = Geschwindigkeit_kmh/3.6;
     
-    Start = find(abs(Streckenmeter-8166) < 0.12 ); % abs(Streckenmeter-8166) = Position Hindernis
+    Start = find(abs(Streckenmeter-8166) < 0.25 ); % abs(Streckenmeter-8166) = Position Hindernis
     
     if size(Start,1) > 1 % Um das richtige Modul zu finden
         Start_row = Start(2,1);
@@ -45,7 +45,7 @@ for i = [2 4 6 7 12 15 16 17 18 19 23 24 25 27 28 32 34 37 39 40]
     minimum_TTC(minTTC_row,2) = i;
     
     minTTC_row = minTTC_row +1;
-    clearvars -except TTC_Data minimum_TTC minTTC_row
+    clearvars -except TTC_Data minimum_TTC minTTC_row Accelerations_Data 
 end
 
 csvwrite('minTTC.csv',minimum_TTC); %% Ausgabedatei schreiben
