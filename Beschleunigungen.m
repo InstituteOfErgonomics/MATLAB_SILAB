@@ -14,7 +14,7 @@ for i = [2 4 6 7 12 15 16 17 18 19 23 24 25 27 28 32 34 37 39 40]
     longitudinal = VP_beschl('Beschl_longitudinal');
     lateral = VP_beschl('Beschl_lateral');
     
-    Start = find(abs(Streckenmeter-8166) < 0.12 );
+    Start = find(abs(Streckenmeter-8166) < 0.25 );
     
     if size(Start,1) > 1
         Start_row = Start(2,1);
